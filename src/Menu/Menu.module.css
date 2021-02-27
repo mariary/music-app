@@ -1,0 +1,28 @@
+.menu {
+    position: relative;
+
+}
+.btn {
+    width: 20px;
+    position: absolute;
+    top: -45px;
+    right: 60px;
+    cursor: pointer;
+}
+.btn_open {
+
+}
+.btn_close {
+
+}
+.hidden {
+    display: none;
+    position: absolute;
+}
+.visible {
+    display: flex;
+    position: absolute;
+}
+.menu_items {
+    flex-direction: column;
+}

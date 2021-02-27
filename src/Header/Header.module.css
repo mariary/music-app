@@ -1,0 +1,19 @@
+.wrapper {
+    background: rgba(193, 82, 88,0.4);
+}
+.wrapper:hover {
+    background: #9ca6dd;
+}
+.header {
+    padding: 10px 15px;background: url("sound-waves.svg") no-repeat;
+    background-position: 300px 20px;
+    padding-right: 50px;
+    background-size: 40px;
+    font-size: 40px;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+}
+.title {
+
+}
