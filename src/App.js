@@ -11,8 +11,6 @@ function App() {
             <Header/>
             <div className="container">
                 <Content/>
-                выавыавыа
-                ывывавы
             </div>
             <Footer/>
         </div>
