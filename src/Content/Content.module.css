@@ -1,0 +1,25 @@
+.content{
+    overflow-x: hidden;
+}
+.search {
+    margin: 20px 0;
+    text-align: center;
+}
+.search_input {
+    width: 350px;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 20px;
+    border: 2px solid #7c93cf;
+}
+.search_btn {
+    border: 2px solid #7c93cf;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
