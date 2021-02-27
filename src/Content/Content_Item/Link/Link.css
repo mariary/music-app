@@ -1,13 +1,10 @@
 .modal {
     height: 100vh;
     width: 100%;
-    background-color: rgba(0,0,0,1);
+    background-color: #222222;
     position: fixed;
     top: 0;
     right: -100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 10;
     font-size: 15px;
     transition: 500ms;
@@ -16,15 +13,4 @@
 .active {
     right: 0px;
     transition:500ms;
-}
-@keyframes modal {
-    0% {
-        transform: scale(1);
-    }
-    1% {
-        left: -1000px;
-    }
-    100% {
-        left: 0px;
-    }
 }

@@ -10,11 +10,15 @@ const Link = (props) => {
                 props.setActive(false)
                 console.log(props.active);
             }}>
-
             </button>
+            <div className={styles.header}>
+                <img src={img} alt="" className={styles.img}/>
+                <div className={styles.header_inner}>
+
+                </div>
+            </div>
             <div className={styles.link}>
-                <img src={img} alt="" className={styles.item_img}/>
-                <div className={styles.item_person}>
+                <div className={styles.person}>
                     чиф киф киф чиф
                 </div>
                 <div className={styles.title}>
