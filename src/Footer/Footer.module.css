@@ -4,17 +4,16 @@
     padding: 10px 0;
 }
 .wrapper {
-    background: rgba(193, 82, 88,0.4);
+    border-top: 1px solid #707070;
+    margin-top: 20px;
 }
-.wrapper:hover {
-    background: #9ca6dd;
-}
+
 .menu_link {
     margin: 10px 20px;
-    color: #484569;
+    color: #ffffff;
     font-weight: 500;
 }
 .menu_link:hover {
-    color:#c15258;
+    color:#fbd661;
 }
 
