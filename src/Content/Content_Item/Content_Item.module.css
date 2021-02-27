@@ -6,7 +6,7 @@
     border-radius: 10px;
 }
 .item:hover {
-    box-shadow: 0 0 15px 0 rgba(193, 82, 88,0.5);
+    box-shadow: 0 0 1px 0 #ffffff;
 }
 .item_img{
     height: 200px;
