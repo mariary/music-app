@@ -3,10 +3,7 @@
 }
 
 .header {
-    padding: 10px 15px;background: url("sound-waves.svg") no-repeat;
-    background-position: 300px 20px;
-    padding-right: 50px;
-    background-size: 40px;
+    padding: 10px 15px 0;
     font-size: 40px;
     margin: 0;
     cursor: pointer;
@@ -14,4 +11,7 @@
 }
 .title {
 
+}
+.img {
+    width: 200px;
 }
