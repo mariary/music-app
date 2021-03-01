@@ -14,23 +14,23 @@ const Link = (props) => {
             }}>
             </button>
             <div className={styles.header}>
-                <img src={img} alt="" className={styles.img}/>
+                <img src={props.song.img} alt="" className={styles.img}/>
                 <div className={styles.header_inner}>
                 </div>
             </div>
             <div className={styles.link}>
                 <div className={styles.person}>
-                    чиф киф киф чиф
+                    {props.Cut(props.song.artist)}
                 </div>
                 <p className={styles.title}>
-                    эйн эбаут зис чиф киф
+                    {props.Cut(props.song.title)}
                 </p>
                 <p className={styles.about}>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's
                 </p>
                 <div className={styles.wrapper}>
-                    <a src="#" className={styles.url}>Song url</a>
+                    <a src={props.song.url} className={styles.url}>Song url</a>
                     <button className={styles.credits} onClick={() => setCreditActive(true)}>Credits</button>
                 </div>
                 <p className={styles.text}>
