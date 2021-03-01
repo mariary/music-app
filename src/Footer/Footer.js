@@ -7,7 +7,7 @@ const Footer = (props) => {
             <div className="container">
                 <footer>
                     <div className={styles.menu}>
-                        <a href="#" className={styles.menu_link}>Наши контакты или че</a>
+                        <a href="#" className={styles.menu_link}>Наши контакты</a>
                         <a href="#" className={styles.menu_link}>мб еще что-то</a>
                         <a href="#" className={styles.menu_link}>ну и еще</a>
                     </div>

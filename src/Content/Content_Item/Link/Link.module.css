@@ -5,5 +5,67 @@
     transform: rotateZ(180deg);
     position: absolute;
     top: 10px;
-    left: 6px;
+    left: -4px;
+    z-index: 10;
+}
+
+.header {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    z-index: -1;
+}
+
+.img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.header_inner {
+    width: 100%;
+    height: 170px;
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.1) 0%, rgb(34, 34, 34) 100%);
+    position: absolute;
+    top: 0;
+}
+
+.link {
+    position: relative;
+    top: -120px;
+    padding: 20px 30px;
+    text-align: left;
+}
+
+.person {
+    color: #fbd661;
+    font-size: 30px;
+}
+
+.title {
+    font-size: 20px;
+    margin: 10px 0 ;
+}
+.about {
+    border-top: 1px solid #797979;
+    border-bottom: 1px solid #797979;
+    padding: 10px 0;
+}
+.url {
+    cursor: pointer;
+    color: #fbd661;
+}
+.url:hover{
+    color: #b39946;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.credits {
+    background: url("next.svg") no-repeat;
+    background-position: right center;
+    background-size: 12px;
+    padding-right: 12px;
+    font-weight: 300;
 }

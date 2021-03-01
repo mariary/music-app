@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './Header.module.css';
+import img from './lol.png'
 
 const Header = (props) => {
     return (
         <div className={styles.wrapper}>
             <div className="container">
-                <h1 className={styles.header}>looool
+                <h1 className={styles.header}>
+                    loool
                 </h1>
             </div>
         </div>
