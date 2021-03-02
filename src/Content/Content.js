@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import styles from './Content.module.css'
 import Content_Item from "./Content_Item/Content_Item";
 
@@ -9,8 +9,18 @@ const Content = (props) => {
     const [query, setQuery] = useState({'q':'скриптонит'});
 
     const link = `https://rapapi.herokuapp.com/api/search`;
+    const hitsUrl = "https://rapapi.herokuapp.com/api/hits";
+    const firstUpdate = useRef(true);
 
     useEffect(() => {
+        getHits();
+    }, [])
+
+    useEffect(() => {
+        if (firstUpdate.current){
+            firstUpdate.current = false;
+            return;
+        }
         getSong();
     }, [query])
 
@@ -26,6 +36,12 @@ const Content = (props) => {
         setSongs(data.songs)
     }
 
+    const getHits = async () => {
+        const response = await fetch(hitsUrl);
+        const data = await response.json();
+        setSongs(data.songs);
+    }
+
     const updateSearch = e => {
         setSearch(e.target.value)
     }
@@ -34,7 +50,7 @@ const Content = (props) => {
         e.preventDefault();
         if (search !== '') {
             setQuery({'q':search})
-            setSearch(' ')
+            setSearch('')
         }
     }
 
