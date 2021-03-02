@@ -5,11 +5,14 @@ const Footer = (props) => {
     return (
         <div className={styles.wrapper}>
             <div className="container">
-                <footer>
+                <footer className={styles.footer}>
                     <div className={styles.menu}>
-                        <a href="#" className={styles.menu_link}>Наши контакты</a>
-                        <a href="#" className={styles.menu_link}>мб еще что-то</a>
-                        <a href="#" className={styles.menu_link}>ну и еще</a>
+                        <button className={styles.menu_link + ' ' + styles.hits}>
+                        </button>
+                        <button className={styles.menu_link + ' ' + styles.search}>
+                        </button>
+                        <button className={styles.menu_link + ' ' + styles.history}>
+                        </button>
                     </div>
                 </footer>
             </div>

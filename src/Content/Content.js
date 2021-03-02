@@ -5,31 +5,26 @@ import Content_Item from "./Content_Item/Content_Item";
 const Content = (props) => {
 
     const [songs, setSongs] = useState([]);
-    //const [post, setPost] = useState([]);
     const [search, setSearch] = useState('');
-    const [query, setQuery] = useState('west');
+    const [query, setQuery] = useState({'q':'скриптонит'});
 
-    const link = `https://rapapi.herokuapp.com/api/search/?q=${query}`;
+    const link = `https://rapapi.herokuapp.com/api/search`;
 
     useEffect(() => {
         getSong();
-        //getPostSong();
     }, [query])
 
-    let obj = {}
     const getSong = async () => {
-        const response = await fetch(link);
+        const response = await fetch(link, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(query)
+        });
         const data = await response.json();
         setSongs(data.songs)
-        obj = data.songs;
     }
-
-    // const getPostSong = async () => {
-    //     const response = await fetch(link, {method: 'POST'});
-    //     const data = await response.json();
-    //     setPost(data.songs)
-    //     console.log(data.songs);
-    // }
 
     const updateSearch = e => {
         setSearch(e.target.value)
@@ -38,8 +33,8 @@ const Content = (props) => {
     const getSearch = e => {
         e.preventDefault();
         if (search !== '') {
-            setQuery(search)
-            setSearch('')
+            setQuery({'q':search})
+            setSearch(' ')
         }
     }
 

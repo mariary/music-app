@@ -1,19 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import img from "./unknown.PNG";
 import styles from './Content_Item.module.css'
 import Link from "./Link/Link";
 
 const Content_Item = (props) => {
+
     const [linkActive, setLinkActive] = useState(false);
+
     function Cut(str) {
-        if (str.includes('(')){
+        if (str.includes('(')) {
             str = str.split('(')[0];
             return str
-        }
-        else {
+        } else {
             return str
         }
     }
+
     return (
         <div className={styles.item}>
             <div className={styles.wrapper} onClick={() => setLinkActive(true)}>
@@ -24,15 +26,21 @@ const Content_Item = (props) => {
                 <div className={styles.title}>
                     {Cut(props.info.title)}
                 </div>
+
             </div>
-            <Link
-                song = {props.info}
-                active={linkActive}
-                setActive={setLinkActive}
-                Cut={Cut}
-            />
+            {linkActive ?
+                <Link
+                    song={props.info}
+                    active={linkActive}
+                    setActive={setLinkActive}
+                    Cut={Cut}
+                />
+                :
+                <div></div>
+            }
+
+
         </div>
     )
 }
-
 export default Content_Item

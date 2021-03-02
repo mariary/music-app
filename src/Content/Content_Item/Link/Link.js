@@ -1,16 +1,33 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import img from "./poster.jpg";
 import style from './Link.css'
 import styles from './Link.module.css'
 import Credit from "./Creditor/Credit";
 
 const Link = (props) => {
-    const [creditActive, setCreditActive] = useState(false)
+    const [creditActive, setCreditActive] = useState(false);
+    const [post, setPost] = useState(props.song);
+    console.log(   post.text);
+    useEffect(() => {
+        getPost();
+    }, [])
+
+    const getPost = async () => {
+        const response = await fetch('https://rapapi.herokuapp.com/api/song', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(post)
+        });
+        const data = await response.json();
+        setPost(data)
+    }
+
     return (
-        <div className={props.active ? 'modal active' : 'modal'}>
+        <div className={props.active ? 'modal1 active' : 'modal'}>
             <button className={styles.btn_prev} onClick={() => {
                 props.setActive(false)
-                console.log(props.active);
             }}>
             </button>
             <div className={styles.header}>
@@ -34,24 +51,7 @@ const Link = (props) => {
                     <button className={styles.credits} onClick={() => setCreditActive(true)}>Credits</button>
                 </div>
                 <p className={styles.text}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum. industry's standard
-                    dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum. industry's standard
-                    dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    {post.text}
                 </p>
             </div>
             <Credit
