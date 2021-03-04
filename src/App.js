@@ -3,7 +3,6 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Content from "./components/Main/Content/Content";
 import Footer from "./components/Footer/Footer";
-import Menu from "./components/Menu/Menu";
 import Hits from "./components/Main/Hits/Hits";
 import History from "./components/Main/History/History";
 

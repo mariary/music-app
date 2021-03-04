@@ -4,10 +4,9 @@ import Content_Item from "../Items/Content_Item/Content_Item";
 
 const Hits = (props) => {
 
-    const [songs, setSongs] = useState([{artist: "", title: ""}, {artist: "", title: ""},
-        {artist: "", title: ""}, {artist: "", title: ""}]);
+    const [songs, setSongs] = useState([{artist: "", title: "",url:1}, {artist: "", title: "",url:2},
+        {artist: "", title: "",url:3}, {artist: "", title: "",url:4}]);
 
-    console.log(songs);
     const link = `https://rapapi.herokuapp.com/api/hits`;
 
     useEffect(() => {

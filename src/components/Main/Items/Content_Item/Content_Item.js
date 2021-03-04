@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import img from "./unknown.PNG";
 import styles from './Content_Item.module.css'
 import Link from "./Link/Link";
@@ -34,6 +34,7 @@ const Content_Item = (props) => {
                     active={linkActive}
                     setActive={setLinkActive}
                     Cut={Cut}
+                    key={props.info.key}
                 />
                 :
                 <div></div>

@@ -12,21 +12,18 @@ const Footer = (props) => {
                             props.activeHits(true)
                             props.activeContent(false)
                             props.activeHistory(false)
-                            console.log(props.hits);
                         }}>
                         </button>
                         <button className={styles.menu_link + ' ' + styles.search} onClick={() => {
                             props.activeHits(false)
                             props.activeContent(true)
                             props.activeHistory(false)
-                            console.log(props.hits);
                         }}>
                         </button>
                         <button className={styles.menu_link + ' ' + styles.history} onClick={() => {
                             props.activeHits(false)
                             props.activeContent(false)
                             props.activeHistory(true)
-                            console.log(props.hits);
                         }}>
                         </button>
                     </div>
