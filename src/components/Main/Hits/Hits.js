@@ -1,11 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import styles from './Hits.module.css'
 import Content_Item from "../Items/Content_Item/Content_Item";
+import tmp_logo from "./load.PNG";
 
 const Hits = (props) => {
 
-    const [songs, setSongs] = useState([{artist: "", title: "",url:1}, {artist: "", title: "",url:2},
-        {artist: "", title: "",url:3}, {artist: "", title: "",url:4}]);
+    const tmp = [];
+    for (let i = 0; i < 10; i++){
+        tmp.push({
+            artist: "",
+            title: "",
+            img: tmp_logo,
+            url: i
+        })
+    }
+    const [songs, setSongs] = useState(tmp);
 
     const link = `https://rapapi.herokuapp.com/api/hits`;
 
