@@ -8,22 +8,11 @@ const Content = (props) => {
     const [search, setSearch] = useState('');
     const [query, setQuery] = useState({'q':''});
     const link = `https://rapapi.herokuapp.com/api/search`;
-<<<<<<< HEAD:src/components/Main/Content/Content.js
-    console.log(songs);
-=======
-    const hitsUrl = "https://rapapi.herokuapp.com/api/hits";
-    const firstUpdate = useRef(true);
->>>>>>> 63aae04edf1ddbc4b1b715d57f1d9c5491d5f963:src/Content/Content.js
-
     useEffect(() => {
-        getHits();
+        getSong();
     }, [])
 
     useEffect(() => {
-        if (firstUpdate.current){
-            firstUpdate.current = false;
-            return;
-        }
         getSong();
     }, [query]);
 
@@ -39,11 +28,6 @@ const Content = (props) => {
         setSongs(data.songs)
     }
 
-    const getHits = async () => {
-        const response = await fetch(hitsUrl);
-        const data = await response.json();
-        setSongs(data.songs);
-    }
 
     const updateSearch = e => {
         setSearch(e.target.value)
