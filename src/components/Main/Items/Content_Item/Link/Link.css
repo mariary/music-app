@@ -32,6 +32,7 @@
     right: 0px;
     transition:500ms;
 }
+
 @keyframes appear {
     0% {
         right: -100vw;

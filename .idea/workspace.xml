@@ -26,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/film-react-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Main" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -40,8 +40,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rybak\Documents\GitHub\music-app\src\components\Main" />
+      <recent name="C:\Users\rybak\Documents\GitHub\music-app\src" />
       <recent name="C:\Users\rybak\Documents\GitHub\music-app\src\Content\Content_Item\Link\Footer" />
       <recent name="C:\Users\rybak\Documents\GitHub\music-app\src\Content\Content_Item\Link" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rybak\Documents\GitHub\music-app\src\components\Main\Hits" />
+      <recent name="C:\Users\rybak\Documents\GitHub\music-app\src\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -57,7 +63,10 @@
       <workItem from="1614619746054" duration="5755000" />
       <workItem from="1614675040032" duration="3613000" />
       <workItem from="1614707373643" duration="147000" />
-      <workItem from="1614708003737" duration="7740000" />
+      <workItem from="1614708003737" duration="8811000" />
+      <workItem from="1614879932026" duration="1719000" />
+      <workItem from="1614881687219" duration="162000" />
+      <workItem from="1614881888325" duration="7521000" />
     </task>
     <servers />
   </component>
