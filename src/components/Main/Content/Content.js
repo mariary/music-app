@@ -8,9 +8,6 @@ const Content = (props) => {
     const [search, setSearch] = useState('');
     const [query, setQuery] = useState({'q':''});
     const link = `https://rapapi.herokuapp.com/api/search`;
-    useEffect(() => {
-        getSong();
-    }, [])
 
     useEffect(() => {
         getSong();
@@ -31,28 +28,29 @@ const Content = (props) => {
 
     const updateSearch = e => {
         setSearch(e.target.value)
+        setQuery({'q':e.target.value})
     }
 
-    const getSearch = e => {
-        e.preventDefault();
-        if (search !== '') {
-            setQuery({'q':search})
-            setSearch('')
-        }
-    }
+    // const getSearch = e => {
+    //     e.preventDefault();
+    //     if (search !== '') {
+    //         setQuery({'q':search})
+    //         setSearch('')
+    //     }
+    // }
 
     return (
         <div className={styles.content}>
-            {query.q == '' ?
+            {query.q == ' ' ?
                 <div className={styles.search}>
-                    <form onSubmit={getSearch}>
+                    <form onSubmit={updateSearch}>
                         <input type="text" className={styles.search_input} value={search} onChange={updateSearch}/>
                         <button type='submit' className={styles.search_btn}>search</button>
                     </form>
                 </div>
                 :
                 <div className={styles.search_active}>
-                    <form onSubmit={getSearch}>
+                    <form onSubmit={updateSearch    }>
                         <input type="text" className={styles.search_input} value={search} onChange={updateSearch}/>
                         <button type='submit' className={styles.search_btn}>search</button>
                     </form>
