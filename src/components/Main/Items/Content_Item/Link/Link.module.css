@@ -19,24 +19,24 @@
 }
 
 .text span {
-    background: #1d1d1d;
-    color: #1d1d1d;
+    background: #0a0a0a;
+    color: #0a0a0a;
     padding: 2px;
-    animation: overlay 2000ms ease infinite;
+    animation: overlay 1000ms ease infinite;
 }
 
 @keyframes overlay {
     0% {
-        background: #1d1d1d;
-        color: #1d1d1d;
+        background: #0a0a0a;
+        color: #0a0a0a;
     }
     50%{
-        background: #212121;
-        color: #212121;
+        background: #161616;
+        color: #161616;
     }
     100% {
-        background: #1d1d1d;
-        color: #1d1d1d;
+        background: #0a0a0a;
+        color: #0a0a0a;
     }
 }
 
