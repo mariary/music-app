@@ -9,4 +9,8 @@
     font-size: 30px;
     margin: 10px 0;
 }
-
+@media (min-width: 770px) {
+    .title{
+        display: none;
+    }
+}

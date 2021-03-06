@@ -1,28 +1,16 @@
-.menu {
-    position: relative;
-
-}
-.btn {
-    width: 20px;
-    position: absolute;
-    top: -45px;
-    right: 60px;
-    cursor: pointer;
-}
-.btn_open {
-
-}
-.btn_close {
-
-}
-.hidden {
-    display: none;
-    position: absolute;
-}
-.visible {
+.items{
     display: flex;
-    position: absolute;
+    justify-content: center;
+    margin: 10px 0;
 }
-.menu_items {
-    flex-direction: column;
+.item{
+    margin: 10px 40px;
+    font-size: 18px;
+    font-family: Roboto;
+}
+
+@media (max-width: 770px) {
+    .menu{
+        display: none;
+    }
 }

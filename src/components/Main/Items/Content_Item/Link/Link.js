@@ -23,7 +23,13 @@ const Link = (props) => {
         "If it's up, then it's up, then it's up, then it's stuck\n",
         "Man, Balenciaga Bardi back and all these bitches fucked\n",
         "It's big bags bussin' out the Bentley Bentayga, man\n",
-        "Birkin bag, Bardi back and all you bitches fucked\n",]
+        "Birkin bag, Bardi back and all you bitches fucked\n",
+        "Man, Balenciaga Bardi back and all these bitches fucked\n",
+        "It's big bags bussin' out the Bentley Bentayga, man\n",
+        "Birkin bag, Bardi back and alffffffffffffffl\n",
+        "I said my face bomb, ass tight ffffff\n",
+        "Broke boys don't deserve no pussffy\n",
+        "Big bag bussin' out the Ben\n",]
 
     const [text, setText] = useState(letter)
     useEffect(() => {
@@ -44,16 +50,17 @@ const Link = (props) => {
     }
     return (
         <div className={props.active ? 'modal1 active' : 'modal'}>
-            <button className={styles.btn_prev} onClick={() => {
-                props.setActive(false)
-            }}>
-            </button>
+
             <div className={styles.header}>
                 <img src={props.song.img} alt="" className={styles.img}/>
                 <div className={styles.header_inner}>
                 </div>
             </div>
             <div className={styles.link}>
+                <button className={styles.btn_prev} onClick={() => {
+                    props.setActive(false)
+                }}>
+                </button>
                 <div className={styles.person}>
                     {props.Cut(props.song.artist)}
                 </div>

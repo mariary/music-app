@@ -4,8 +4,8 @@
     padding: 20px;
     transform: rotateZ(180deg);
     position: absolute;
-    top: 10px;
-    left: -4px;
+    top: -30px;
+    left: -7px;
     z-index: 10;
 }
 
@@ -75,6 +75,8 @@
     top: -120px;
     padding: 20px 30px;
     text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .person {

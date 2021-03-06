@@ -27,8 +27,9 @@ const Content = (props) => {
 
 
     const updateSearch = e => {
-        setSearch(e.target.value)
-        setQuery({'q':e.target.value})
+        setSearch(e.target.value);
+        setQuery({'q':e.target.value});
+        e.preventDefault();
     }
 
     // const getSearch = e => {
@@ -50,7 +51,7 @@ const Content = (props) => {
                 </div>
                 :
                 <div className={styles.search_active}>
-                    <form onSubmit={updateSearch    }>
+                    <form onSubmit={updateSearch}>
                         <input type="text" className={styles.search_input} value={search} onChange={updateSearch}/>
                         <button type='submit' className={styles.search_btn}>search</button>
                     </form>

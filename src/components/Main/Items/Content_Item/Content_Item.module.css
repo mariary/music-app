@@ -21,3 +21,12 @@
     font-weight: 700;
     margin: 10px 0;
 }
+@media (max-width: 420px) {
+    .item_img{
+        height: 100px;
+        width: 100px;
+    }
+    .item{
+        width: 105px;
+    }
+}

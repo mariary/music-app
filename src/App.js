@@ -5,6 +5,7 @@ import Content from "./components/Main/Content/Content";
 import Footer from "./components/Footer/Footer";
 import Hits from "./components/Main/Hits/Hits";
 import History from "./components/Main/History/History";
+import Menu from "./components/Menu/Menu";
 
 function App() {
     const [hits,activeHits] = useState(true)
@@ -13,6 +14,14 @@ function App() {
     return (
         <div className="App">
             <Header/>
+            <Menu
+                hits={hits}
+                content={content}
+                history={history}
+                activeHits={activeHits}
+                activeContent={activeContent}
+                activeHistory={activeHistory}
+            />
             <div className="container">
                 {hits ? <Hits/> : <div></div>}
                 {content? <Content/>: <div></div>}
