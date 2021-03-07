@@ -44,7 +44,7 @@ const Link = (props) => {
         let name = cname + "=";
         let decodedCookie = decodeURIComponent(document.cookie);
         let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
+        for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
             while (c.charAt(0) === ' ') {
                 c = c.substring(1);
@@ -79,6 +79,7 @@ const Link = (props) => {
         });
         setText(data.text);
     }
+    let hits=true;
     return (
         <div className={props.active ? 'modal1 active' : 'modal'}>
 
@@ -99,8 +100,14 @@ const Link = (props) => {
                     {props.Cut(props.song.title)}
                 </p>
                 <p className={styles.about}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's
+                    <div className={styles.views}>
+                        34837
+                    </div>
+                    {hits?
+                        <div className={styles.info}></div>
+                        :
+                        <div></div>
+                    }
                 </p>
                 <div className={styles.wrapper}>
                     <a src={props.song.url} className={styles.url}>Song url</a>

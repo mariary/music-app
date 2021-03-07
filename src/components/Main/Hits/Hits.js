@@ -6,7 +6,7 @@ import tmp_logo from "./load.PNG";
 const Hits = (props) => {
 
     const tmp = [];
-    for (let i = 0; i < 10; i++){
+    for (let i = 0; i < 10; i++) {
         tmp.push({
             artist: "",
             title: "",
@@ -28,19 +28,24 @@ const Hits = (props) => {
         setSongs(data.songs)
     }
 
-
     return (
         <div className={styles.content}>
             <div className={styles.title}>Hits</div>
             <div className={styles.inner}>
-                {songs.map((song) => {
-                    return (
-                        <Content_Item
-                            key={song.url}
-                            info={song}
-                        />
-                    )
-                })}
+                <ol>
+                    {songs.map((song) => {
+                        return (
+                            <li>
+                                <Content_Item
+                                    key={song.url}
+                                    info={song}
+                                    kind={'list'}
+                                    hits={'hits'}
+                                />
+                            </li>
+                        )
+                    })}
+                </ol>
             </div>
         </div>
     )

@@ -21,6 +21,142 @@
     font-weight: 700;
     margin: 10px 0;
 }
+.list .title,.list .info  {
+    text-align: left;
+}
+
+ol{
+    counter-reset: myCounter;
+    width: 100%;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    position: relative;
+}
+
+li:before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: #999999;
+    font-weight: 800;
+    position: absolute;
+    left: -35px;
+    bottom: 25px;
+    text-align: center;
+    margin: 5px 10px;
+    line-height: 40px;
+    width: 31px;
+    height: 30px;
+    font-size: 13px;
+}
+.list .item{
+    width: 100%;
+}
+.list .item_img{
+    width: 60px;
+    height: 60px;
+}
+.list .info {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    position: relative;
+}
+.hits .info::after{
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url('fire.svg') no-repeat;
+    background-size: 25px;
+    position: absolute;
+    margin: 5px 0 0px 30px;
+}
+.list .hits .info::after{
+    left: 400px;
+    margin: unset;
+}
+.list .item_person {
+    margin: 0 10px;
+}
+.list .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px 0 0;
+}
+.views{
+    margin: 10px 0 0;
+    position: relative;
+}
+.views::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url('view.svg') no-repeat;
+    background-size: 13px;
+    position: absolute;
+    left: 38px;
+    bottom: -9px;
+}
+.list .views {
+    margin: 0 10px;
+    position: relative;
+}
+.list .views::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url('view.svg') no-repeat;
+    background-size: 16px;
+    position: absolute;
+    left: -28px;
+    bottom: -7px;
+}
+.length {
+    display: none;
+}
+@media (max-width: 620px) {
+    .list .item_person {
+        display: block;
+    }
+    .list .item_img{
+        float: left;
+        margin-right: 10px;
+    }
+    .list .info {
+        display: block;
+        width:250px;
+        text-align: left;
+    }
+    .list .item_img{
+        width: 40px;
+        height: 40px;
+    }
+    .info {
+        font-size: 14px;
+    }
+    li::before{
+        left: -30px;
+        bottom: 15px;
+    }
+    .hits .info::after{
+        content: '';
+        width: 25px;
+        height: 25px;
+        background: url('fire.svg') no-repeat;
+        background-size: 25px;
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        left: unset;
+        bottom: 6px;
+    }
+    .views::before{
+        display: none;
+    }
+}
 @media (max-width: 420px) {
     .item_img{
         height: 100px;

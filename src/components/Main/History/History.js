@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styles from './History.module.css'
+import Content_Item from "../Items/Content_Item/Content_Item";
 
 
 const History = (props) => {
@@ -8,7 +9,7 @@ const History = (props) => {
         let name = cname + "=";
         let decodedCookie = decodeURIComponent(document.cookie);
         let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
+        for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
             while (c.charAt(0) === ' ') {
                 c = c.substring(1);
@@ -49,8 +50,17 @@ const History = (props) => {
 
     return (
         <div className={styles.history}>
+            <div className={styles.title}>History</div>
             <div className={styles.inner}>
-                Маша, зайди в консоль, там увидишь откуда берутся данные для истории
+                {songs.map((song) => {
+                    return (
+                        <Content_Item
+                            key={song.url}
+                            info={song}
+                            kind={'list'}
+                        />
+                    )
+                })}
             </div>
         </div>
     )

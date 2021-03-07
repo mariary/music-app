@@ -93,6 +93,9 @@
     border-top: 1px solid #797979;
     border-bottom: 1px solid #797979;
     padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
 .url {
@@ -115,4 +118,26 @@
     background-size: 12px;
     padding-right: 12px;
     font-weight: 300;
+}
+.info::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url('/src/components/Main/Items/Content_Item/fire.svg') no-repeat;
+    background-size: 25px;
+    position: absolute;
+    right: 0px;
+    bottom: 8px;
+}
+.views{
+    margin-left: 25px;
+}
+.views::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url('/src/components/Main/Items/Content_Item/view.svg') no-repeat;
+    background-size: 16px;
+    position: absolute;
+    left: 0;
 }
