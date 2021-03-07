@@ -1,12 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import img from "./poster.jpg";
-import style from './Link.css'
+import style from './Link.css' // ???
 import styles from './Link.module.css'
 import Credit from "./Creditor/Credit";
 
 const Link = (props) => {
+    const URL = "https://rapapi.herokuapp.com/api/song";
+    // const URL = "http://127.0.0.1:5000/api/song";
     const [creditActive, setCreditActive] = useState(false);
-    const [post, setPost] = useState(props.song);
+    const [post, setPost] = useState({
+        title: props.song.title,
+        artist: props.song.artist,
+        img: props.song.img,
+        url: props.song.url,
+        token: getCookie("token")
+    });
+
     let letter = [
         "(I know that's right)\n",
         "Make a nigga act right\n",
@@ -31,13 +40,29 @@ const Link = (props) => {
         "Broke boys don't deserve no pussffy\n",
         "Big bag bussin' out the Ben\n",]
 
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
     const [text, setText] = useState(letter)
     useEffect(() => {
         getPost();
     }, [])
 
     const getPost = async () => {
-        const response = await fetch('https://rapapi.herokuapp.com/api/song', {
+        const response = await fetch(URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
@@ -45,7 +70,13 @@ const Link = (props) => {
             body: JSON.stringify(post)
         });
         const data = await response.json();
-        setPost(data);
+        setPost({
+            title: data.title,
+            artist: data.artist,
+            img: data.img,
+            url: data.url,
+            token: getCookie("token")
+        });
         setText(data.text);
     }
     return (

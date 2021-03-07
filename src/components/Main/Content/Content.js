@@ -42,7 +42,7 @@ const Content = (props) => {
 
     return (
         <div className={styles.content}>
-            {query.q == ' ' ?
+            {query.q === ' ' ?
                 <div className={styles.search}>
                     <form onSubmit={updateSearch}>
                         <input type="text" className={styles.search_input} value={search} onChange={updateSearch}/>
