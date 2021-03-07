@@ -16,13 +16,19 @@ const Content_Item = (props) => {
         }
     }
 
+    // onLinkClick = () => {
+    //     if (props.mount){
+    //         setLinkActive(true);
+    //     }
+    // }
+
     let kind = props.kind;
     let hits = true
     return (
         <div className={styles[kind]}>
         <div className={hits ? styles['hits'] : ' '}>
             <div className={styles.item}>
-                <div className={styles.wrapper} onClick={() => setLinkActive(true)}>
+                <div className={styles.wrapper} onClick={() => setLinkActive(props.mount)}>
                     <div className={styles.info}>
                         <img src={props.info.img} alt="" className={styles.item_img}/>
                         <div className={styles.item_person}>

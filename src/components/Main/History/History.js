@@ -25,6 +25,7 @@ const History = (props) => {
     // const URL = "http://127.0.0.1:5000/api/history";
 
     const [songs, setSongs] = useState([]);
+    const [dataState, setDataState] = useState(false);
 
     useEffect(() => {
         getSongs();
@@ -44,7 +45,7 @@ const History = (props) => {
             }
         );
         const data = await response.json();
-        console.log(data);
+        setDataState(true);
         setSongs(data)
     }
 
@@ -58,6 +59,7 @@ const History = (props) => {
                             key={song.url}
                             info={song}
                             kind={'list'}
+                            mount={dataState}
                         />
                     )
                 })}

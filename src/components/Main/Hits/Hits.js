@@ -11,10 +11,11 @@ const Hits = (props) => {
             artist: "",
             title: "",
             img: tmp_logo,
-            url: i
+            url: i,
         })
     }
     const [songs, setSongs] = useState(tmp);
+    const [dataState, setDataState] = useState(false);
 
     const link = `https://rapapi.herokuapp.com/api/hits`;
 
@@ -25,6 +26,7 @@ const Hits = (props) => {
     const getSong = async () => {
         const response = await fetch(link);
         const data = await response.json();
+        setDataState(true);
         setSongs(data.songs)
     }
 
@@ -41,6 +43,7 @@ const Hits = (props) => {
                                     info={song}
                                     kind={'list'}
                                     hits={'hits'}
+                                    mount={dataState}
                                 />
                             </li>
                         )
