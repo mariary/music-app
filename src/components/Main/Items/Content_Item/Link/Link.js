@@ -1,15 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import img from "./poster.jpg";
-import style from './Link.css' // ???
 import styles from './Link.module.css'
-import Credit from "./Creditor/Credit";
 
 const Link = (props) => {
     
     const URL = "https://rapapi.herokuapp.com/api/song";
     // const URL = "http://127.0.0.1:5000/api/song";
 
-    const [creditActive, setCreditActive] = useState(false);
+    //const [creditActive, setCreditActive] = useState(false);
     const [post, setPost] = useState({
         title: props.song.title,
         artist: props.song.artist,
@@ -88,7 +86,6 @@ const Link = (props) => {
     let hits=true;
     return (
         <div className={props.active ? 'modal1 active' : 'modal'}>
-
             <div className={styles.header}>
                 <img src={props.song.img} alt="" className={styles.img}/>
                 <div className={styles.header_inner}>
@@ -117,7 +114,6 @@ const Link = (props) => {
                 </p>
                 <div className={styles.wrapper}>
                     <a src={props.song.url} className={styles.url}>Song url</a>
-                    <button className={styles.credits} onClick={() => setCreditActive(true)}>Credits</button>
                 </div>
                 <p className={styles.text}>
                     {text === letter ?
@@ -130,10 +126,6 @@ const Link = (props) => {
                     }
                 </p>
             </div>
-            <Credit
-                active={creditActive}
-                setActive={setCreditActive}
-            />
         </div>
     )
 }

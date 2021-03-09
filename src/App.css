@@ -8,11 +8,13 @@ body {
   background: #222222;
   color: #d4d4d4;
   font-family: Roboto, sans-serif;
+  padding-right: 20px;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1050px;
   margin: 0 auto;
-  padding: 0 1.5em;
+  padding: 0 2.5em;
 }
 button {
   background: none;
@@ -38,6 +40,7 @@ a:active, a:hover { outline: none; }
   Menu{
     display: block;
   }
+
 }
 @media (max-width: 770px) {
   Footer{
@@ -45,5 +48,60 @@ a:active, a:hover { outline: none; }
   }
   Menu{
     display: none;
+  }
+  .container {
+    padding: 30px 2.5em 1px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 30px 1.5em;
+  }
+}
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  background-color: #222222;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  z-index: 1000;
+  font-size: 15px;
+  transition: 500ms;
+  overflow: auto;
+}
+.modal1 {
+  width: 100%;
+  background-color: #222222;
+  position: fixed;
+  bottom: -95px;
+  top: 0;
+  right: -100vw;
+  z-index: 1000;
+  font-size: 15px;
+  transition: 500ms;
+  overflow: auto;
+  animation: appear 500ms linear;
+  padding-right: 20px;
+  margin-right: -20px;
+}
+
+.active1 {
+  animation: appear 500ms linear;
+  animation-direction: reverse;
+}
+.active {
+  right: 0px;
+  transition:500ms;
+}
+
+@keyframes appear {
+  0% {
+    right: -100vw;
+  }
+  100%{
+    right: 0px;
   }
 }

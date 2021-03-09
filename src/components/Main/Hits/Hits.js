@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import styles from './Hits.module.css'
 import Content_Item from "../Items/Content_Item/Content_Item";
-import tmp_logo from "./load.PNG";
+import tmp_logo from "./load.png";
+import history from '../History/History.module.css';
 
 const Hits = (props) => {
 
@@ -38,6 +39,14 @@ const Hits = (props) => {
             <div className={styles.title}>Hits</div>
             <div className={styles.inner}>
                 <ol>
+                    {songs[0].artist === '' ?
+                        <div className={history.loading}>
+                            <div className={history.img}>
+                            </div>
+                        </div>
+                        :
+                        <div></div>
+                    }
                     {songs.map((song) => {
                         return (
                             <li>

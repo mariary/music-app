@@ -2,13 +2,38 @@
     display: flex;
     flex-direction: column;
 }
+
 .title {
     text-align: center;
     font-size: 30px;
     margin: 10px 0;
 }
+
+.loading {
+    width: 100%;
+    position: fixed;
+    top: 45%;
+    left: 47%;
+}
+
+.img {
+    background: url("loading.svg");
+    width: 30px;
+    height: 30px;
+    animation: load 500ms linear infinite;
+}
+
+@keyframes load {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
 @media (min-width: 770px) {
-    .title{
+    .title {
         display: none;
     }
 }

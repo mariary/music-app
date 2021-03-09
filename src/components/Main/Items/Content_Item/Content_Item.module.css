@@ -156,6 +156,9 @@ li:before {
     .views::before{
         display: none;
     }
+    .list .hits .info::after{
+        left: unset;
+    }
 }
 @media (max-width: 420px) {
     .item_img{
@@ -165,4 +168,17 @@ li:before {
     .item{
         width: 105px;
     }
+
+}
+@media (max-width: 390px) {
+    .list .title{
+        width: 180px;
+    }
+    .list .hits .info::after{
+        left: 170px;
+    }
+    .item {
+        height: 40px;
+    }
+
 }

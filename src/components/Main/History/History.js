@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styles from './History.module.css'
 import Content_Item from "../Items/Content_Item/Content_Item";
+import tmp_logo from "../Hits/load.PNG";
 
 
 const History = (props) => {
@@ -53,6 +54,14 @@ const History = (props) => {
         <div className={styles.history}>
             <div className={styles.title}>History</div>
             <div className={styles.inner}>
+                {songs.length > 0 ?
+                    <div></div>
+                    :
+                    <div className={styles.loading}>
+                        <div className={styles.img}>
+                        </div>
+                    </div>
+                }
                 {songs.map((song) => {
                     return (
                         <Content_Item
@@ -63,6 +72,7 @@ const History = (props) => {
                         />
                     )
                 })}
+
             </div>
         </div>
     )

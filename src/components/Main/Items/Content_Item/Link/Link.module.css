@@ -3,9 +3,9 @@
     background-size: 30px;
     padding: 20px;
     transform: rotateZ(180deg);
-    position: absolute;
-    top: -30px;
-    left: -7px;
+    position: fixed;
+    top: 55px;
+    left: 0px;
     z-index: 10;
 }
 
@@ -72,8 +72,8 @@
 
 .link {
     position: relative;
-    top: -120px;
-    padding: 20px 30px;
+    top: -85px;
+    padding: 20px 40px;
     text-align: left;
     max-width: 900px;
     margin: 0 auto;
