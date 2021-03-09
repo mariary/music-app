@@ -5,14 +5,18 @@ import styles from './Link.module.css'
 import Credit from "./Creditor/Credit";
 
 const Link = (props) => {
+    
     const URL = "https://rapapi.herokuapp.com/api/song";
     // const URL = "http://127.0.0.1:5000/api/song";
+
     const [creditActive, setCreditActive] = useState(false);
     const [post, setPost] = useState({
         title: props.song.title,
         artist: props.song.artist,
         img: props.song.img,
         url: props.song.url,
+        views: props.song.views,
+        hit: props.song.hit,
         token: getCookie("token")
     });
 
@@ -75,6 +79,8 @@ const Link = (props) => {
             artist: data.artist,
             img: data.img,
             url: data.url,
+            views: data.views,
+            hit: data.hit,
             token: getCookie("token")
         });
         setText(data.text);
@@ -101,9 +107,9 @@ const Link = (props) => {
                 </p>
                 <p className={styles.about}>
                     <div className={styles.views}>
-                        34837
+                        {props.song.views}
                     </div>
-                    {hits?
+                    {props.song.hit ?
                         <div className={styles.info}></div>
                         :
                         <div></div>

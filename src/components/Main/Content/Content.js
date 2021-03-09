@@ -7,7 +7,9 @@ const Content = (props) => {
     const [songs, setSongs] = useState([]);
     const [search, setSearch] = useState('');
     const [query, setQuery] = useState({'q':''});
+
     const link = `https://rapapi.herokuapp.com/api/search`;
+    // const link = "http://127.0.0.1:5000/api/search";
 
     useEffect(() => {
         getSong();
@@ -64,6 +66,7 @@ const Content = (props) => {
                         <Content_Item
                             key={song.url}
                             info={song}
+                            mount={true}
                         />
                     )
                 })}

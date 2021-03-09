@@ -11,6 +11,8 @@ const Hits = (props) => {
             artist: "",
             title: "",
             img: tmp_logo,
+            views: "",
+            hit: false,
             url: i,
         })
     }
@@ -18,6 +20,7 @@ const Hits = (props) => {
     const [dataState, setDataState] = useState(false);
 
     const link = `https://rapapi.herokuapp.com/api/hits`;
+    // const link = "http://127.0.0.1:5000/api/hits";
 
     useEffect(() => {
         getSong();

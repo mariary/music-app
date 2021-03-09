@@ -34,6 +34,7 @@ function App() {
 
     // const URL = "http://127.0.0.1:5000/api/signup";
     const URL = "https://rapapi.herokuapp.com/api/signup";
+    
     fetch(
         URL,{
             method: "POST",

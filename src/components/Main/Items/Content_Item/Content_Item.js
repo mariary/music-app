@@ -16,17 +16,11 @@ const Content_Item = (props) => {
         }
     }
 
-    // onLinkClick = () => {
-    //     if (props.mount){
-    //         setLinkActive(true);
-    //     }
-    // }
-
     let kind = props.kind;
     let hits = true
     return (
         <div className={styles[kind]}>
-        <div className={hits ? styles['hits'] : ' '}>
+        <div className={props.info.hit ? styles['hits'] : ' '}>
             <div className={styles.item}>
                 <div className={styles.wrapper} onClick={() => setLinkActive(props.mount)}>
                     <div className={styles.info}>
@@ -39,7 +33,7 @@ const Content_Item = (props) => {
                         </div>
                     </div>
                     <div className={styles.views}>
-                        34837
+                        {props.info.views}
                     </div>
                     <div className={styles.length}>
                         3:30
