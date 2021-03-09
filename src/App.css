@@ -10,7 +10,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 .container {
-  max-width: 500px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 0 1.5em;
 }
@@ -30,3 +30,20 @@ a {
   text-decoration: none;
 }
 a:active, a:hover { outline: none; }
+
+@media (min-width: 770px) {
+  Footer{
+    display: none;
+  }
+  Menu{
+    display: block;
+  }
+}
+@media (max-width: 770px) {
+  Footer{
+    display: block;
+  }
+  Menu{
+    display: none;
+  }
+}

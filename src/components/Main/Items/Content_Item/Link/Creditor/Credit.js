@@ -6,7 +6,6 @@ const Credit = (props) => {
         <div className={props.active ? 'modal active' : 'modal'}>
             <button className={styles.btn_prev} onClick={() => {
                 props.setActive(false)
-                console.log(props.active);
             }}></button>
             <div className={styles.credit}>
                 <p className={styles.title}>
@@ -16,7 +15,6 @@ const Credit = (props) => {
                     orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's
                 </p>
-
             </div>
         </div>
     )

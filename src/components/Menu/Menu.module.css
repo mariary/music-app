@@ -1,0 +1,16 @@
+.items{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.item{
+    margin: 10px 40px;
+    font-size: 18px;
+    font-family: Roboto;
+}
+
+@media (max-width: 770px) {
+    .menu{
+        display: none;
+    }
+}

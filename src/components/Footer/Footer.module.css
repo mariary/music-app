@@ -1,0 +1,44 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.wrapper {
+    margin-top: 20px;
+}
+
+.menu_link {
+    margin: 10px 30px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 20px;
+}
+
+.menu_link:hover {
+    color:#fbd661;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    left: 0;
+    background: #222222;
+    border-top: 1px solid #707070;
+}
+.hits {
+    background: url("star.svg") no-repeat;
+    background-size: 40px;
+    background-position: center;
+    margin-top: 3px;
+}
+.history {
+    background: url("history.svg") no-repeat;
+    background-size: 35px;
+    background-position: center;
+}
+.search {
+    background: url("search.svg") no-repeat;
+    background-size: 40px;
+    background-position: center;
+}
