@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import styles from './History.module.css'
 import Content_Item from "../Items/Content_Item/Content_Item";
 import tmp_logo from "../Hits/load.PNG";
+import empty_list from './box.svg';
 
 
 const History = (props) => {
@@ -25,9 +26,9 @@ const History = (props) => {
     const URL = "https://rapapi.herokuapp.com/api/history";
     // const URL = "http://127.0.0.1:5000/api/history";
 
-    const [songs, setSongs] = useState([]);
+    const [songs, setSongs] = useState(null);
     const [dataState, setDataState] = useState(false);
-
+    console.log(songs);
     useEffect(() => {
         getSongs();
     }, [])
@@ -54,25 +55,31 @@ const History = (props) => {
         <div className={styles.history}>
             <div className={styles.title}>History</div>
             <div className={styles.inner}>
-                {songs.length > 0 ?
-                    <div></div>
-                    :
+                {songs === null ?
                     <div className={styles.loading}>
                         <div className={styles.img}>
                         </div>
                     </div>
-                }
-                {songs.map((song) => {
-                    return (
-                        <Content_Item
-                            key={song.url}
-                            info={song}
-                            kind={'list'}
-                            mount={dataState}
-                        />
+                    : (songs.length > 0 ?
+                            <div>
+                                {songs.map((song) => {
+                                    return (
+                                        <Content_Item
+                                            key={song.url}
+                                            info={song}
+                                            kind={'list'}
+                                            mount={dataState}
+                                        />
+                                    )
+                                })}
+                            </div>
+                            :
+                            <div className={styles.clear}>
+                                <img src={empty_list} alt=""/>
+                                Ваш список пуст
+                            </div>
                     )
-                })}
-
+                }
             </div>
         </div>
     )

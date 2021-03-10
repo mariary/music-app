@@ -37,3 +37,14 @@
         display: none;
     }
 }
+
+.clear {
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 18px;
+}
+.clear img {
+    width: 50px;
+    display: block;
+    margin: 10px auto;
+}
