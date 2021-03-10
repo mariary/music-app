@@ -32,9 +32,13 @@ const Content_Item = (props) => {
                             {Cut(props.info.title)}
                         </div>
                     </div>
-                    <div className={styles.views}>
-                        {props.info.views}
-                    </div>
+                    {props.info.views.length > 0 ?
+                        <div className={styles.views}>
+                            {props.info.views}
+                        </div>
+                        :
+                        <div></div>
+                    }
                     <div className={styles.length}>
                         3:30
                     </div>

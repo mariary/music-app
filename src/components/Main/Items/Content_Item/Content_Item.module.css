@@ -97,7 +97,7 @@ li:before {
     background: url('view.svg') no-repeat;
     background-size: 13px;
     position: absolute;
-    left: 38px;
+    left: 25px;
     bottom: -9px;
 }
 .list .views {
@@ -151,16 +151,16 @@ li:before {
         position: absolute;
         right: 0px;
         left: unset;
-        bottom: 6px;
+        bottom:10px;
     }
     .views::before{
-        display: none;
+
     }
     .list .hits .info::after{
         left: unset;
     }
 }
-@media (max-width: 420px) {
+@media (max-width: 450px) {
     .item_img{
         height: 100px;
         width: 100px;
@@ -168,6 +168,10 @@ li:before {
     .item{
         width: 105px;
     }
+    .list .views::before{
+        display: none;
+    }
+
 
 }
 @media (max-width: 390px) {
@@ -177,7 +181,7 @@ li:before {
     .list .hits .info::after{
         left: 170px;
     }
-    .item {
+    .list .item {
         height: 40px;
     }
 

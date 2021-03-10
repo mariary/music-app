@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styles from './Hits.module.css'
 import Content_Item from "../Items/Content_Item/Content_Item";
-import tmp_logo from "./load.png";
+import tmp_logo from "./load.PNG";
 import history from '../History/History.module.css';
 
 const Hits = (props) => {

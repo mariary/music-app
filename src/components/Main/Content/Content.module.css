@@ -18,7 +18,7 @@
         top:40vh;
     }
     100%{
-        top:4vh;
+        top:8vh;
     }
 }
 .search_input {
@@ -30,6 +30,7 @@
     border: 2px solid #797979;
     background-color: #222222;
     color: #d4d4d4;
+    font-size: 20px;
 }
 .search_btn {
     border: 2px solid #797979;
@@ -43,5 +44,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 30px 0 70px;
+    margin: 65px 0 45px;
+}
+
+@media (min-width: 770px) {
+    .search_input{
+        margin-bottom: 40px;
+    }
 }

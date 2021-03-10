@@ -50,7 +50,7 @@ a:active, a:hover { outline: none; }
     display: none;
   }
   .container {
-    padding: 30px 2.5em 1px;
+    padding: 30px 2.5em 25px;
   }
 }
 

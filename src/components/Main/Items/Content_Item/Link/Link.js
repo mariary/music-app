@@ -103,9 +103,13 @@ const Link = (props) => {
                     {props.Cut(props.song.title)}
                 </p>
                 <p className={styles.about}>
-                    <div className={styles.views}>
-                        {props.song.views}
-                    </div>
+                    {props.song.views.length > 0 ?
+                        <div className={styles.views}>
+                            {props.song.views}
+                        </div>
+                        :
+                        <div></div>
+                    }
                     {props.song.hit ?
                         <div className={styles.info}></div>
                         :
