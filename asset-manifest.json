@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/music-app/static/css/main.550afaa3.chunk.css",
-    "main.js": "/music-app/static/js/main.86c18050.chunk.js",
-    "main.js.map": "/music-app/static/js/main.86c18050.chunk.js.map",
+    "main.css": "/music-app/static/css/main.570fc5bf.chunk.css",
+    "main.js": "/music-app/static/js/main.587d0a7e.chunk.js",
+    "main.js.map": "/music-app/static/js/main.587d0a7e.chunk.js.map",
     "runtime-main.js": "/music-app/static/js/runtime-main.e4d9f313.js",
     "runtime-main.js.map": "/music-app/static/js/runtime-main.e4d9f313.js.map",
-    "static/js/2.44e634c4.chunk.js": "/music-app/static/js/2.44e634c4.chunk.js",
-    "static/js/2.44e634c4.chunk.js.map": "/music-app/static/js/2.44e634c4.chunk.js.map",
+    "static/js/2.00a22f2c.chunk.js": "/music-app/static/js/2.00a22f2c.chunk.js",
+    "static/js/2.00a22f2c.chunk.js.map": "/music-app/static/js/2.00a22f2c.chunk.js.map",
     "static/js/3.780742b6.chunk.js": "/music-app/static/js/3.780742b6.chunk.js",
     "static/js/3.780742b6.chunk.js.map": "/music-app/static/js/3.780742b6.chunk.js.map",
     "index.html": "/music-app/index.html",
-    "static/css/main.550afaa3.chunk.css.map": "/music-app/static/css/main.550afaa3.chunk.css.map",
-    "static/js/2.44e634c4.chunk.js.LICENSE.txt": "/music-app/static/js/2.44e634c4.chunk.js.LICENSE.txt",
+    "static/css/main.570fc5bf.chunk.css.map": "/music-app/static/css/main.570fc5bf.chunk.css.map",
+    "static/js/2.00a22f2c.chunk.js.LICENSE.txt": "/music-app/static/js/2.00a22f2c.chunk.js.LICENSE.txt",
     "static/media/box.d8914003.svg": "/music-app/static/media/box.d8914003.svg",
     "static/media/Content_Item.module.css": "/music-app/static/media/view.4a7766fd.svg",
     "static/media/Footer.module.css": "/music-app/static/media/star.f4734270.svg",
@@ -19,12 +19,13 @@
     "static/media/History.module.css": "/music-app/static/media/loading.0c0f9572.svg",
     "static/media/Link.module.css": "/music-app/static/media/next.4abd615a.svg",
     "static/media/poster.43b400ca.jpg": "/music-app/static/media/poster.43b400ca.jpg",
+    "static/media/search.a797d798.svg": "/music-app/static/media/search.a797d798.svg",
     "static/media/unknown.937307d2.PNG": "/music-app/static/media/unknown.937307d2.PNG"
   },
   "entrypoints": [
     "static/js/runtime-main.e4d9f313.js",
-    "static/js/2.44e634c4.chunk.js",
-    "static/css/main.550afaa3.chunk.css",
-    "static/js/main.86c18050.chunk.js"
+    "static/js/2.00a22f2c.chunk.js",
+    "static/css/main.570fc5bf.chunk.css",
+    "static/js/main.587d0a7e.chunk.js"
   ]
 }
