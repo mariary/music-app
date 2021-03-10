@@ -116,9 +116,6 @@ const Link = (props) => {
                         <div></div>
                     }
                 </p>
-                <div className={styles.wrapper}>
-                    <a src={props.song.url} className={styles.url}>Song url</a>
-                </div>
                 <p className={styles.text}>
                     {text === letter ?
                         letter.map((span) => {

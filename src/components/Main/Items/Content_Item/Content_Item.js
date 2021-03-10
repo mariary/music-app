@@ -15,7 +15,22 @@ const Content_Item = (props) => {
             return str
         }
     }
-
+    function toShortInt(str){
+        if(str.includes('K')||str.includes('M')){
+            return str
+        }
+        else {
+            let n = parseInt(str)/1000;
+            if (n < 1){
+                return Math.round(n*1000);
+            }
+            if(n>1000){
+                n = Math.round(n/1000)
+                return `${n}M`;
+            }
+            return `${Math.round(n)}K`;
+        }
+    }
     let kind = props.kind;
     let hits = true
     return (
@@ -34,7 +49,7 @@ const Content_Item = (props) => {
                     </div>
                     {props.info.views.length > 0 ?
                         <div className={styles.views}>
-                            {props.info.views}
+                            {toShortInt(props.info.views)}
                         </div>
                         :
                         <div></div>

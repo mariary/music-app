@@ -168,7 +168,7 @@ li:before {
     .item{
         width: 105px;
     }
-    .list .views::before{
+    .views::before{
         display: none;
     }
 

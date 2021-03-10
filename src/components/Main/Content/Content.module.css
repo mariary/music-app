@@ -9,7 +9,7 @@
 .search_active {
     text-align: center;
     position: relative;
-    animation: search 800ms ease;
+    animation:  800ms ease;
     animation-fill-mode: forwards;
     margin: 0 0 45px;
 }
@@ -44,11 +44,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 65px 0 45px;
+    margin: 0 0 45px;
 }
-
+.empty{
+    width: 50px;
+    display: block;
+    margin: 20px auto;
+}
 @media (min-width: 770px) {
     .search_input{
-        margin-bottom: 40px;
+
     }
+}
+
+::grammar-error{
+    text-decoration: none;
 }

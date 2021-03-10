@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styles from './Content.module.css'
 import Content_Item from "../Items/Content_Item/Content_Item";
+import empty from './search.svg';
 
 const Content = (props) => {
 
@@ -54,22 +55,32 @@ const Content = (props) => {
                 :
                 <div className={styles.search_active}>
                     <form onSubmit={updateSearch}>
-                        <input type="text" className={styles.search_input} value={search} onChange={updateSearch}/>
+                        <input type="text" className={styles.search_input} spellCheck="false" value={search} onChange={updateSearch}/>
                         <button type='submit' className={styles.search_btn}>search</button>
                     </form>
                 </div>
             }
 
             <div className={styles.inner}>
-                {songs.map((song) => {
-                    return (
-                        <Content_Item
-                            key={song.url}
-                            info={song}
-                            mount={true}
-                        />
-                    )
-                })}
+                {songs.length > 0 ?
+                    <div className={styles.inner}>
+                        {songs.map((song) => {
+                            return (
+                                <Content_Item
+                                    key={song.url}
+                                    info={song}
+                                    mount={true}
+                                />
+                            )
+                        })}
+                    </div>
+                    :
+                    <div>
+                        <img src={empty} className={styles.empty} alt=""/>
+                        Введите название песни
+                    </div>
+                }
+
             </div>
         </div>
     )
