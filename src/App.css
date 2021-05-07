@@ -4,6 +4,15 @@ colors {
   color: #c9b480;
   color: #fbd661;
 }
+html {
+  background: #222222;
+}
+#root{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: #222222;
+}
 body {
   background: #222222;
   color: #d4d4d4;

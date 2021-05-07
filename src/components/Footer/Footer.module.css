@@ -1,7 +1,7 @@
 .menu {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 10px 0 20px;
 }
 .wrapper {
     margin-top: 20px;
@@ -28,17 +28,17 @@
 }
 .hits {
     background: url("star.svg") no-repeat;
-    background-size: 40px;
+    background-size: 33px;
     background-position: center;
     margin-top: 3px;
 }
 .history {
     background: url("history.svg") no-repeat;
-    background-size: 35px;
+    background-size: 33px;
     background-position: center;
 }
 .search {
     background: url("search.svg") no-repeat;
-    background-size: 40px;
+    background-size: 33px;
     background-position: center;
 }
