@@ -83,7 +83,6 @@ const Link = (props) => {
         });
         setText(data.text);
     }
-    let hits=true;
     return (
         <div className={props.active ? 'modal1 active' : 'modal'}>
             <div className={styles.header}>

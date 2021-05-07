@@ -14,6 +14,7 @@ const Content = (props) => {
 
     useEffect(() => {
         getSong();
+        setTimeout( setQueryFunction, 1000);
     }, [query]);
 
     const getSong = async () => {
@@ -31,8 +32,11 @@ const Content = (props) => {
 
     const updateSearch = e => {
         setSearch(e.target.value);
-        setQuery({'q':e.target.value});
         e.preventDefault();
+    }
+
+    const setQueryFunction = () => {
+        setQuery({'q':search});
     }
 
     // const getSearch = e => {
