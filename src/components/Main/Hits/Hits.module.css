@@ -7,7 +7,7 @@
 .title {
     text-align: center;
     font-size: 30px;
-    margin: 10px 0;
+    margin: 30px 0 10px;
 }
 @media (min-width: 770px) {
     .title{
